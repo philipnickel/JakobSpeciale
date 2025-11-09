@@ -3,5 +3,5 @@
 ## ReadTheDocs
 
 For detailed documentation, see  
-[Implementation details on ReadTheDocs](https://02689-advanced-num-alg.readthedocs.io/en/latest/)
+[Implementation details on ReadTheDocs](https://JakobSpeciale.readthedocs.io/en/latest/)
 
