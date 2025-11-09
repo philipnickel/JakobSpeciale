@@ -1,0 +1,146 @@
+{
+ "Callable": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "typing",
+   "module_short": "typing",
+   "name": "Callable"
+  }
+ ],
+ "KdVSolver": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "KdVSolver"
+  }
+ ],
+ "KdVSolver.stable_dt": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp.KdVSolver",
+   "module_short": "spectral.tdp.KdVSolver",
+   "name": "stable_dt"
+  }
+ ],
+ "Path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pathlib",
+   "module_short": "pathlib",
+   "name": "Path"
+  }
+ ],
+ "RK3": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "RK3"
+  }
+ ],
+ "RK4": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "RK4"
+  }
+ ],
+ "np.abs": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "abs"
+  }
+ ],
+ "np.array": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "array"
+  }
+ ],
+ "np.ceil": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ceil"
+  }
+ ],
+ "np.isfinite": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "isfinite"
+  }
+ ],
+ "np.max": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "max"
+  }
+ ],
+ "np.ndarray": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "np.sqrt": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "sqrt"
+  }
+ ],
+ "np.sum": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "sum"
+  }
+ ],
+ "pd.DataFrame": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "soliton": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "soliton"
+  }
+ ]
+}

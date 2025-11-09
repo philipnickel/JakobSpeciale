@@ -1,0 +1,68 @@
+# Plots
+figures/
+# Data
+# data/  # Now included in repo for documentation builds
+
+# Sphinx documentation
+docs/source/generated/
+docs/source/_autosummary/
+docs/source/gen_modules/backreferences/
+
+# macOS
+.DS_Store
+.DS_Store?
+
+# Git
+.git/
+
+# Python
+*__pycache__/
+*.py[cod]
+*.py[co]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# UV
+.uv/
+uv.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# OS generated files
+Thumbs.db
+
+.claude/ 
+.ruff_cache/

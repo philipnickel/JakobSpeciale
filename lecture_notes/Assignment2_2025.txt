@@ -1,0 +1,226 @@
+Assignment #2 02689 Advanced Numerical Methods for Differential Equations Autumn 2025
+Assignment #2. Spectral methods for the solution of differential equations.
+In this assignment, the fundamental routines of the spectral methods toolbox you have developed during assignment #1 in Matlab/Octave/Python is to be applied for the first time for the
+solution of differential equations.
+
+Boundary Value Problems
+a) Consider the second-order boundary value problem
+−ϵ
+
+d2
+d
+u − u = 1,
+2
+dx
+dx
+
+u(0) = u(1) = 0
+
+where ϵ is a small positive parameter which control the width of a ’boundary layer’ on the
+left side of the domain for x ∈ [0, 1]. Confirm that the exact solution to the problem is
+u(x) =
+
+e−x/ϵ + (x − 1) − e−1/ϵ x
+e−1/ϵ − 1
+
+Derive and implement two numerical schemes for solving this problem using, respectively, a
+spectral Legendre Tau Method (LTM) and a Legendre Collocation Method (LCM). Consider
+the relative differences in accuracy for ϵ = 0.1, 0.01, 0.001 as a function of modes included
+in a series expansions for the solution. Discuss pros and cons for using these methods.
+Remark:
+It is given that if u(x) (square-integrable) and derivatives of u(x) are represented in terms
+of Legendre series
+u(x) =
+
+∞
+X
+
+∞
+∞
+X
+X
+dq
+dq
+ûn q Ln (x) =
+û(q)
+u(x) =
+n Ln (x)
+dxq
+dx
+n=0
+n=0
+
+ûn Ln (x),
+
+n=0
+
+(q)
+
+where the coefficients of the derivatives ûn and those of the solution ûn are related through
+û(1)
+n = (2n + 1)
+
+∞
+X
+
+ûp ,
+
+û(2)
+n =
+
+p=n+1
+n+p odd
+
+n + 21
+
+∞
+ X
+
+(p(p + 1) − n(n + 1))ûp ,
+
+n≥0
+
+p=n+2
+n+p even
+
+Furthermore, the three-term recurrence relation for Legendre polynomials exist
+(q)
+
+û(q−1)
+=
+n
+
+(q)
+
+ûn−1
+û
+− n+1 ,
+2n − 1 2n + 3
+
+n≥1
+
+and may be used for the construction of a sparse coefficient matrix for the Tau method.
+b) Derive, implement and verify spectral accuracy for a spectral method for solving the secondorder Boundary Value Problem for irrotational flow around a cylinder1 stated in polar coordinates (r, θ) as
+
+
+1 ∂
+∂ϕ
+1 ∂ 2ϕ
+2
+∇ ϕ=
+r
++ 2 2 = 0, (r, θ) ∈ [r1 , ∞[×[0, 2π], r1 > 0
+r ∂r
+∂r
+r ∂θ
+where ϕ(x, y) a scalar velocity potential function which describes the velocity field (u, v) =
+r2
+∇ϕ. The exact solution is given as ϕ(r, θ) = V∞ (r + r1 ) cos(θ) and can be used for imposing
+boundary conditions in a finite domain (r, ϕ) ∈ [r1, r2] × [0, 2π], r1 < r2 < ∞. V∞ is the
+magnitude of the far-field flow velocity (V∞ = 1 can be assumed) and r1 the cylinder radius.
+
+Assignment #2 02689 Advanced Numerical Methods for Differential Equations Autumn 2025
+
+Time-dependent problems
+In this part, the goal is to develop a spectral model for solving the famous Korteweg-de Vries
+(KdV) equation and then assess the properties and performance of the implemented model.
+In the following, consider the following KdV equation
+∂t u + 6u∂x u + ∂xxx u = 0,
+
+−∞ < x < ∞,
+
+t>0
+
+An exact traveling wave solution (referred to as a soliton) to the KdV equation is given as
+
+√
+u(x, t) = f (x − ct), f (x) = 12 c sech2 12 c(x − x0 )
+where x0 is the center of soliton at t = 0. The soliton travels to the right with speed c > 0 with
+a shape defined by f (x). The solitary wave solution has the property that
+lim u(x, t) = 0
+
+x→∞
+
+for all times t.
+It can be shown that the solitary wave solution fulfills the KdV equation and that the three
+fundamental quantities mass (M ), momentum (V ) and energy (E)
+Z ∞
+Z ∞
+Z ∞
+2
+M=
+udx, V =
+u dx, E =
+( 21 u2x − u3 )dx
+−∞
+
+−∞
+
+−∞
+
+are all conserved (invariant) with respect to time.
+c) Develop (in writing) a spectral method of Fourier type and implement it for solving the
+KdV equation. This includes selecting an appropriate time-stepping method (give heuristic
+expression for defining acceptable stable time steps for arbitrary number of nodes), verifying that the implemented method is correct and description of how this has been done in
+sufficient details.
+d) Test your solver using the solution of a single solitary wave of varying heights, e.g. c ∈
+[0.25, 0.5, 1]. Make plots of the evolution of estimated errors ||u − IN u||2 and ||u − IN u||∞
+as well as the quantifies M̃ ≈ M , Ṽ ≈ V and Ẽ ≈ E for all runs you do. How well does
+the solver mimic the physical solution and properties hereof? Do a small investigation of
+the importance of choice of domain size and number of nodes with respect to accuracy and
+relate to choice of c. Make sure to comment and discuss relevant details.
+e) Describe and discuss possible sources of aliasing errors in your model. Investigate the effects
+of aliasing errors by spectral harmonic analysis of changes in magnitudes of coefficients of
+different Fourier modes of the solution in time (use FFT). Do you see problems with aliasing
+errors? If so, test if you can stabilize the model via some appropriate de-aliasing strategy?
+f) Simulate a collision of two solitons which are initially well apart in order to represent the
+initial state by superposition of the two single solitons initially defined by (x0 , c) = (−40, 0.5)
+and (x0 , c) = (−15, 0.25). Make a space-time plot for x ∈ [−Lx , Lx ] (choose Lx ) and time
+interval t ∈ [0, 120] in which a collision of the solitons will take place.
+
+Assignment #2 02689 Advanced Numerical Methods for Differential Equations Autumn 2025
+g) Carry out a scalability analysis for your implemented model (fx. measure performance as
+CPU time/time step for varying number of nodes N ). What do you expect? Discuss what
+you have done to make your implementation efficient and what could be done to further
+improve it.
+h) Consider the linear advection equation
+∂φ
+∂φ
++a
+= 0, 0 < x < 2π, t > 0
+∂t
+∂x
+φ(x, 0) = φ0 (x), 0 ≤ x ≤ 2π
+φ(0, t) = gl (t), t ≥ 0, a > 0,
+Assume real-valued constant a > 0. It is possible to show that the exact solution can be
+represented as
+φ(x, t) = f (x − at)
+where f (y) is an arbitrary function. The boundary condition is defined at the left boundary
+as gl (t) = u(0, t) when a > 0 and the right boundary as gr (t) = u(2π, t).
+Solve this IVP as a Boundary Value Problem (BVP) by formulating it as a problem in
+multiple dimensions when solving PDEs, i.e. with dimensions for both space (x) and time
+(t).
+Hence, we can utilize spectral differentiation matrices defined for multiple dimensions for
+formulate a polynomial collocation scheme that solve the advection equation using global
+expansions in a finite xt-domain as a BVP solver
+L̃u = f̃
+where L̃ is the modified system matrix and right-hand side vector that takes into account
+initial condition (IC) and spatial boundary conditions (BCs).
+Define
+L = Dt + aDx ,
+
+f = 0.
+
+where Dt = Dt ⊗ I and Dx = I ⊗ Dx .
+The modified operators is obtained by updating the scheme for nodes at the t = 0 boundary
+to incorporate the initial condition and the x = 0 boundary to incorporate the left boundary
+condition. Update procedure eliminates rows in L and inserts a ’1’ on the diagonal, and
+then adds the IC/BC-conditions to f .
+Demonstrate convergence and plot snapshots of the solutions for the report.
+Communicate your results in a written report. Make sure to describe and comment on important details and findings. Include sufficiently details for the reader to both reproduce and
+understand the reported results and conclusions.
+Enjoy!
+Allan P. Engsig-Karup
+Deadline for this assignment is Wednesday, 5 Nov, 2025, 23:59.
+
+

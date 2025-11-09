@@ -1,0 +1,164 @@
+{
+ "KdVSolver": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "KdVSolver"
+  }
+ ],
+ "KdVSolver.stable_dt": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp.KdVSolver",
+   "module_short": "spectral.tdp.KdVSolver",
+   "name": "stable_dt"
+  }
+ ],
+ "Path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pathlib",
+   "module_short": "pathlib",
+   "name": "Path"
+  }
+ ],
+ "ProcessPoolExecutor": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "concurrent.futures",
+   "module_short": "concurrent.futures",
+   "name": "ProcessPoolExecutor"
+  }
+ ],
+ "RK3": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "RK3"
+  }
+ ],
+ "RK4": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "RK4"
+  }
+ ],
+ "__name__": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "str"
+  }
+ ],
+ "as_completed": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "concurrent.futures",
+   "module_short": "concurrent.futures",
+   "name": "as_completed"
+  }
+ ],
+ "np.abs": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "abs"
+  }
+ ],
+ "np.float32": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "float32"
+  }
+ ],
+ "np.int32": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "int32"
+  }
+ ],
+ "np.isfinite": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "isfinite"
+  }
+ ],
+ "np.max": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "max"
+  }
+ ],
+ "np.nan": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "nan"
+  }
+ ],
+ "os.cpu_count": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "os",
+   "module_short": "os",
+   "name": "cpu_count"
+  }
+ ],
+ "pd.DataFrame": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "DataFrame"
+  }
+ ],
+ "pd.concat": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "concat"
+  }
+ ],
+ "soliton": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spectral.tdp",
+   "module_short": "spectral",
+   "name": "soliton"
+  }
+ ]
+}
