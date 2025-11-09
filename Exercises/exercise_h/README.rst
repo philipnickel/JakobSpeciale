@@ -1,4 +1,0 @@
-Exercise H
-==========
-
-Advanced applications.
