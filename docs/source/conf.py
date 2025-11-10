@@ -1,6 +1,5 @@
 """Sphinx configuration for numutils package documentation."""
 
-import importlib.util
 import os
 import sys
 
@@ -19,13 +18,6 @@ author = "Your Name"
 
 # -- General configuration ---------------------------------------------------
 
-# Detect LaTeX build from marker file (set by main.py)
-import os
-
-_marker_file = os.path.join(os.path.dirname(__file__), ".building_latex")
-_is_latex_build = os.path.exists(_marker_file)
-
-# Extensions - conditionally exclude gallery for LaTeX
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
@@ -34,14 +26,10 @@ extensions = [
     "sphinx.ext.viewcode",
     "numpydoc",
     "sphinx_copybutton",
+    "sphinx_gallery.gen_gallery",
 ]
 
-# Only add gallery for non-LaTeX builds
-if not _is_latex_build:
-    extensions.append("sphinx_gallery.gen_gallery")
-
-# Source files - use different index for LaTeX
-root_doc = "index_latex" if _is_latex_build else "index"
+root_doc = "index"
 source_suffix = {".rst": "restructuredtext"}
 
 # -- Autodoc configuration ---------------------------------------------------
@@ -80,7 +68,7 @@ sphinx_gallery_conf = {
     "download_all_examples": False,  # No download buttons
     "remove_config_comments": True,  # Clean up notebook outputs
     "abort_on_example_error": False,  # Continue if examples fail
-    "plot_gallery": True,  # Gallery extension will be removed for LaTeX in setup()
+    "plot_gallery": True,  # Enable plot gallery generation
     "capture_repr": ("_repr_html_", "__repr__"),  # Capture output representations
     "matplotlib_animations": True,  # Support matplotlib animations
     # Remove Jupyter cell markers (# %%) from rendered output
@@ -124,17 +112,3 @@ html_theme_options = {
     "collapse_navigation": True,  # Start with collapsed navigation
     "secondary_sidebar_items": ["page-toc"],  # Only show page TOC, not section nav
 }
-
-# -- LaTeX/PDF output options ------------------------------------------------
-
-# Import LaTeX configuration from separate file
-spec = importlib.util.spec_from_file_location(
-    "latex_conf", os.path.join(os.path.dirname(__file__), "latex_conf.py")
-)
-latex_conf = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(latex_conf)
-
-latex_engine = latex_conf.latex_engine
-latex_documents = latex_conf.latex_documents
-latex_show_urls = latex_conf.latex_show_urls
-latex_elements = latex_conf.latex_elements

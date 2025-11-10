@@ -88,7 +88,9 @@ for name, func, a, b, exact in functions:
         if N == 100:
             print(f"  N={N}:")
             print(f"    Trapezoidal: {trapz_result:.10f} (error: {trapz_error:.2e})")
-            print(f"    Simpson:     {simpson_result:.10f} (error: {simpson_error:.2e})")
+            print(
+                f"    Simpson:     {simpson_result:.10f} (error: {simpson_error:.2e})"
+            )
 
 # %% Save results
 df = pd.DataFrame(results)

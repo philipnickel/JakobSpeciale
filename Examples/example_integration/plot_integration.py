@@ -27,6 +27,7 @@ for base_path in [Path("."), Path("../.."), Path("../../..")]:
 
 if data_file is None:
     import sys
+
     print("Warning: Data file not found. Run compute.py first.")
     sys.exit(0)
 

@@ -1,10 +1,15 @@
-# Plots
+# Generated figures
 figures/
-# Data
-# data/  # Now included in repo for documentation builds
 
-# Sphinx documentation
+# Generated data (keep README.md)
+data/*
+!data/README.md
+!data/.gitkeep
+
+# Sphinx documentation build artifacts
+docs/build/
 docs/source/generated/
+docs/source/example_gallery/
 docs/source/_autosummary/
 docs/source/gen_modules/backreferences/
 
@@ -37,9 +42,8 @@ ENV/
 env.bak/
 venv.bak/
 
-# UV
+# UV cache
 .uv/
-uv.lock
 
 # IDE
 .vscode/

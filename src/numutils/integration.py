@@ -11,7 +11,9 @@ import numpy as np
 from numpy.typing import NDArray
 
 
-def integrate_trapz(f: Callable[[float], float], a: float, b: float, n: int = 100) -> float:
+def integrate_trapz(
+    f: Callable[[float], float], a: float, b: float, n: int = 100
+) -> float:
     """
     Integrate a function using the trapezoidal rule.
 
@@ -45,7 +47,9 @@ def integrate_trapz(f: Callable[[float], float], a: float, b: float, n: int = 10
     return h * (0.5 * y[0] + np.sum(y[1:-1]) + 0.5 * y[-1])
 
 
-def integrate_simpson(f: Callable[[float], float], a: float, b: float, n: int = 100) -> float:
+def integrate_simpson(
+    f: Callable[[float], float], a: float, b: float, n: int = 100
+) -> float:
     """
     Integrate a function using Simpson's rule.
 
