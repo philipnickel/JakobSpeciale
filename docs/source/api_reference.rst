@@ -4,100 +4,44 @@
 API Reference
 =============
 
-This page provides an overview of the ``spectral`` package API.
+This page provides an overview of the ``numutils`` package API.
 
-.. currentmodule:: spectral
+.. currentmodule:: numutils
 
-Spectral Basis Classes
-======================
+Linear Algebra
+==============
 
-Classes for spectral methods on different bases.
-
-.. autosummary::
-   :toctree: generated
-   :nosignatures:
-
-   LegendreLobattoBasis
-   FourierEquispacedBasis
-
-Spectral Differentiation Matrices
-==================================
-
-Functions to construct differentiation and mass matrices.
+Basic linear algebra operations.
 
 .. autosummary::
    :toctree: generated
    :nosignatures:
 
-   legendre_diff_matrix
-   legendre_mass_matrix
-   fourier_diff_matrix_cotangent
-   fourier_diff_matrix_on_interval
+   norm
+   solve_linear
 
-Boundary Value Problems
-========================
+Numerical Integration
+=====================
 
-Solvers for boundary value problems (BVPs).
+Numerical integration methods.
 
 .. autosummary::
    :toctree: generated
    :nosignatures:
 
-   BvpProblem
-   solve_bvp
-   solve_legendre_collocation
-   solve_legendre_tau
-   solve_polar_bvp
-
-Time-Dependent PDEs
-===================
-
-Time integrators and PDE solvers.
-
-Time Integrators
-----------------
-
-.. autosummary::
-   :toctree: generated
-   :nosignatures:
-
-   TimeIntegrator
-   get_time_integrator
-   RK3
-   RK4
-
-KdV Equation Solver
--------------------
-
-.. autosummary::
-   :toctree: generated
-   :nosignatures:
-
-   KdVSolver
-   soliton
-   two_soliton_initial
+   integrate_trapz
+   integrate_simpson
 
 Utilities
 =========
 
-Helper functions for I/O, formatting, plotting, and numerical analysis.
+Helper functions for plotting and visualization.
 
-.. currentmodule:: spectral.utils
+.. currentmodule:: numutils.utils
 
 .. autosummary::
    :toctree: generated
    :nosignatures:
 
-   io.ensure_output_dir
-   io.load_simulation_data
-   io.save_simulation_data
-   formatting.extract_metadata
-   formatting.format_dt_latex
-   formatting.format_parameter_range
-   formatting.build_parameter_string
-   plotting.add_parameter_footer
-   plotting.get_repo_root
-   norms.discrete_l2_norm
-   norms.discrete_l2_error
-   norms.discrete_linf_error
+   setup_plotting
 

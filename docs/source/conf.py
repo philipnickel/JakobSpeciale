@@ -1,4 +1,4 @@
-"""Sphinx configuration for spectral package documentation."""
+"""Sphinx configuration for numutils package documentation."""
 
 import importlib.util
 import os
@@ -13,11 +13,9 @@ sys.path.insert(0, repo_root)
 
 # -- Project information -----------------------------------------------------
 
-project = "Assignment 2 - 02689 Advanced Numerical Algorithms"
-copyright = (
-    "2025, Louis Kamp Eskildsen, Aske Funch Schrøder Nielsen, Philip Korsager Nickel"
-)
-author = "Louis Kamp Eskildsen, Aske Funch Schrøder Nielsen, Philip Korsager Nickel"
+project = "University Project Template"
+copyright = "2025, Your Name"
+author = "Your Name"
 
 # -- General configuration ---------------------------------------------------
 
@@ -76,8 +74,8 @@ numpydoc_use_plots = False  # Don't auto-generate plots from Examples
 # -- Sphinx Gallery configuration --------------------------------------------
 
 sphinx_gallery_conf = {
-    "examples_dirs": "../../Exercises",  # Path to exercise scripts
-    "gallery_dirs": "exercise_gallery",  # Output directory for gallery
+    "examples_dirs": "../../Examples",  # Path to example scripts
+    "gallery_dirs": "example_gallery",  # Output directory for gallery
     "filename_pattern": "/plot_",  # Pattern to match which scripts to execute
     "download_all_examples": False,  # No download buttons
     "remove_config_comments": True,  # Clean up notebook outputs
@@ -91,11 +89,11 @@ sphinx_gallery_conf = {
     "notebook_images": False,  # Don't embed images in notebooks
     # Cross-referencing: Create "Examples using X" in API docs
     "backreferences_dir": "gen_modules/backreferences",
-    "doc_module": ("spectral",),  # Generate backreferences for our package
+    "doc_module": ("numutils",),  # Generate backreferences for our package
     "inspect_global_variables": True,  # Detect classes/functions used in examples
-    # Make code clickable: Link to API docs when code mentions spectral functions
+    # Make code clickable: Link to API docs when code mentions numutils functions
     "reference_url": {
-        "spectral": None,  # None = use local docs (not external URL)
+        "numutils": None,  # None = use local docs (not external URL)
     },
 }
 
@@ -111,13 +109,13 @@ intersphinx_mapping = {
 # -- HTML output options -----------------------------------------------------
 
 html_theme = "pydata_sphinx_theme"
-html_title = "02689 Advanced Numerical Algorithms - Assignment 2"
+html_title = "University Project Template"
 html_static_path = ["_static"]
 html_show_sourcelink = False  # Hide "Show Source" link
 html_css_files = ["custom.css"]  # Custom CSS for hiding download buttons
 
 html_theme_options = {
-    "github_url": "https://github.com/philipnickel/02689-Advanced-Num",
+    "github_url": "https://github.com/yourusername/yourproject",
     "show_nav_level": 1,  # Only show top-level items expanded in sidebar
     "navigation_depth": 2,  # Allow 2 levels but don't expand by default
     "show_toc_level": 3,  # Show 3 levels in the page TOC (includes subsections)

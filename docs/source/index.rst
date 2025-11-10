@@ -1,26 +1,28 @@
-Assignment 2 – 02689 Advanced Numerical Algorithms
-==================================================
+University Project Template
+===========================
 
-**Authors:** Louis Kamp Eskildsen, Aske Funch Schrøder Nielsen, Philip Korsager Nickel
+A template for numerical computing projects with documentation and examples.
 
-This documentation serves as an appendix to assignment 2 for DTU course 02689 Advanced Numerical Algorithms.
+**Authors:** Your Name
 
-For the full codebase, please visit the `GitHub repository <https://github.com/philipnickel/02689-Advanced-Num>`.
+This documentation provides both example scripts and API reference for the numerical utilities package.
+
+For the full codebase, please visit the `GitHub repository <https://github.com/yourusername/yourproject>`.
 
 Contents
 --------
 
-:doc:`exercise_gallery/index`
-   Gallery of all exercises (A-H) with the scripts used for computing data and figures.
+:doc:`example_gallery/index`
+   Gallery of example scripts demonstrating the use of the package.
 :doc:`api_reference`
-   Complete reference for our implementation in the form of the ``spectral`` package.
+   Complete API reference for the ``numutils`` package.
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Exercises
+   :caption: Examples
 
-   exercise_gallery/index
+   example_gallery/index
 
 .. toctree::
    :maxdepth: 1

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Main script to run all exercises."""
+"""Main script to run all examples."""
 
 import argparse
 import subprocess
@@ -8,10 +8,10 @@ from pathlib import Path
 
 
 def discover_scripts():
-    """Find all Python scripts in Exercises/ directory."""
+    """Find all Python scripts in Examples/ directory."""
     scripts = [
         p
-        for p in Path("Exercises").rglob("*.py")
+        for p in Path("Examples").rglob("*.py")
         if p.is_file() and p.name != "__init__.py"
     ]
 
@@ -42,21 +42,21 @@ def run_scripts(scripts):
             )
 
             if result.returncode == 0:
-                print(f"  ✓ {script.relative_to('Exercises')}")
+                print(f"  ✓ {script.relative_to('Examples')}")
                 success_count += 1
             else:
                 print(
-                    f"  ✗ {script.relative_to('Exercises')} (exit {result.returncode})"
+                    f"  ✗ {script.relative_to('Examples')} (exit {result.returncode})"
                 )
                 if result.stderr:
                     print(f"    Error: {result.stderr[:200]}")
                 fail_count += 1
 
         except subprocess.TimeoutExpired:
-            print(f"  ✗ {script.relative_to('Exercises')} (timeout)")
+            print(f"  ✗ {script.relative_to('Examples')} (timeout)")
             fail_count += 1
         except Exception as e:
-            print(f"  ✗ {script.relative_to('Exercises')} ({e})")
+            print(f"  ✗ {script.relative_to('Examples')} ({e})")
             fail_count += 1
 
     print(f"\n  Summary: {success_count} succeeded, {fail_count} failed\n")
@@ -294,7 +294,7 @@ def clean_docs():
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        description="Run exercise scripts and manage figures",
+        description="Run example scripts and manage documentation",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -343,7 +343,7 @@ Examples:
     if args.build_latex:
         build_latex_docs()
 
-    # Handle exercise scripts and figures
+    # Handle example scripts and figures
     if args.compute or args.plot:
         compute_scripts, plot_scripts = discover_scripts()
         print(
